@@ -48,7 +48,9 @@ body {
     opacity: 1;
   }
 }
-
+.rate-card {
+  margin-left: 0.95rem;
+}
 .custom-left {
 margin-left: -20rem;
 }
@@ -67,13 +69,13 @@ margin-left: -20rem;
   display: none;
   }
 .p-card img {
-width: 9px;
-height: 9px;
+width: 14px;
+height: 14px;
 margin-left: 7px;
 }
 .p-card{
   font-size: 10px;
-  padding-top : 8px;
+  padding-top : 7px;
   display: flex;
   cursor: pointer;
 }
@@ -91,7 +93,7 @@ height: 13px;
   text-decoration: underline;
 }
 .row-wrapper {
-  margin-top: 42px;
+  margin-top: 34px;
   margin-bottom: 12px;
 }
 .card-headnig {
@@ -106,6 +108,7 @@ height: 13px;
   margin-top: 4px;
   margin-bottom: 5px;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: underline;
 }
 .qustion-img  {
 padding-top: 12px;
@@ -115,6 +118,12 @@ cursor: pointer;
 .ml-custom-3 {
   margin-left: 12px;
 }
+.qustion-img span {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #81C1E1;
+  margin-left: 1px;
+}
 .qustion-img img {
   width: 5%;
   margin-right: 3px;
@@ -123,24 +132,26 @@ cursor: pointer;
 }
 .steke-model-btn {
   background-color: #1092B2;
-  color: honeydew;
-  width: 60%;
+  color: white;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
-padding: 6px 6px;
-  border-radius: .25rem;
+  margin-top: 17px;
+  padding: 6px 6px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
 .steke-sm-btn-none {
   display: block;
 }
 .fantom-card1{
-font-size: 20px;
+font-size: 23px;
 font-weight: 700;
 color: #1092B2;
 }
 .fantom-card2{
-font-size: 20px;
+font-size: 23px;
 font-weight: 700;
 color: #FE7D1E;
 }
@@ -148,10 +159,11 @@ color: #FE7D1E;
   font-size: 18px;
   font-weight: 800;
   font-family: 'Montserrat', sans-serif;
+  padding-top: 4px;
 }
 .img-object{
   height: 50px;
-   margin-right: 20px;
+   margin-right: 16px;
 }
 .custom-object {
   padding-top: 20px;
@@ -175,7 +187,7 @@ color: #FE7D1E;
 }
 .box {
   position: relative;
-  width: 50%;
+  // width: 50%;
   margin: 0 auto;
   height: auto;
   max-height: 70vh;
@@ -262,13 +274,21 @@ color: #FE7D1E;
   float: right;
   font-size: 0.1px;
 }
-
+.mobile-footer {
+  display: none;
+}
 @media screen and (max-width: 700px) {
   .popup {
     width: 70%;
   }
+  .qustion-img-mobile {
+    display: block;
+    } 
   .ml-custom-3 {
     margin-left: 0px;
+  }
+  .rate-card {
+    margin-left: 0rem;
   }
   .box {
     width: 90%;
@@ -286,19 +306,40 @@ color: #FE7D1E;
     font-size: 10px;
     margin-top: 20px;
 }
-.qustion-img {
-display: none;
+.mobile-footer {
+  display: block;
+}
+.steke-model-btn-mobile {
+  background-color: #1092B2;
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+   margin-top: 0px; 
+  padding: 6px 6px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+.qustion-img-mobile {
+display: block;
+}
+.qustion-img-mobile span {
+color: #81C1E1;
+text-decoration: underline;
 }
 .qustion-img-mobile img{
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 12px;
   margin-right: 2px;
   margin-top: 4px;
 }
 .stake-card {
   padding: 12px 12px;
 }
-
+.row-wrapper {
+    margin-top: 4px;
+}
 .qustion-img-mobile {
   display: block;
   
@@ -309,23 +350,6 @@ margin-top: 6px;
     background-color: #1092B2;
     color: honeydew;
     width: 43%;
-    margin-left: auto;
-     margin-right: unset;
-     margin-top: 2px; 
-    padding: 6px 6px;
-    border-radius: 0.25rem;
-}
-.row-wrapper {
-  margin-top: 2px;
-  margin-bottom: 12px;
-}
-.img-object {
-  height: 50px;
-  margin-right: 20px;
-  margin-left: 10%;
-}
-.stake-card-custom {
-margin-top: 16px;
 }
 }
 
