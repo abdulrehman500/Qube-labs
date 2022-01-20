@@ -1,10 +1,13 @@
 
 import React from "react";
+import {Animated} from "react-animated-css"; 
 
 const Popup = (props) => {
   return (
     <div className="popup-box flex items-center justify-center bg-slate-200 bg-opacity-60 backdrop-blur-sm">
+      <Animated animationIn="flipInX" animationOut="flipOutY" isVisible={true}>
       <div className="box modal-skew-from-left border-black-100">
+        <h1>{props.handleCloseValue} </h1>
         <span className="close-icon pt-3" onClick={props.handleClose}>
         {/* <i class="fa fa-times"></i> */}
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 21 21">
@@ -14,6 +17,7 @@ const Popup = (props) => {
         </span>
         {props.content}
       </div>
+      </Animated>
     </div>
   );
 };

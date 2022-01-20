@@ -10,6 +10,7 @@ import car1 from "../assets/ast/car1.png";
 // import car6 from "../assets/ast/car6.png";
 // import car7 from "../assets/ast/car7.png";
 // import car8 from "../assets/ast/car8.png";
+
 import Boxbg from "../assets/Qubelabs-box.png";
 import contentCapy from "../assets/content-copy.png";
 import externallink from "../assets/external-link.png";
@@ -24,6 +25,8 @@ export default function Staking() {
    const textAreaRef = useRef(null);
    const togglePopup = () => {
      setIsOpen(!isOpen);
+     console.log(isOpen);
+     console.log("ddd");
    };
    function copyToClipboard(e) {
     textAreaRef.current.select();
@@ -44,18 +47,18 @@ export default function Staking() {
                
                   <div className="container">
                     <div className="row d-flex justify-content-center">
-                     
+                     <h1>{isOpen}</h1>
                       <div className="col-12 col-md-4">
       
                       <div class="media custom-object d-flex">
                       <img alt="..." src={car1} className="img-object" />
-  <div class="media-body">
-  <h4 className="fantom-card">
-                          Fantom (FTM)
-                        </h4>
-    <a className="p-card">https://fantom.foundation <img src={externallink} alt="" /></a>
-     </div>
-</div>
+                      <div class="media-body">
+                      <h4 className="fantom-card">
+                                              Fantom (FTM)
+                                            </h4>
+                        <a className="p-card">https://fantom.foundation <img src={externallink} alt="" /></a>
+                        </div>
+                       </div>
                    
                       {/* <div className="fantom-modal-header">
                       <img alt="..." src={car1} className="img111" />
@@ -90,8 +93,8 @@ export default function Staking() {
                       <div className="col-12 col-md-6 order-0 order-md-1 ">
                       <div className="row  justify-content-between">
                     
-                        <div className="col-6 ">
-                        <div className="ml-3">
+                        <div className="col-8 ">
+                        <div className="">
                         <div className="rate-card">
                           <h3 className="card-headnig">Annual Reward Rate</h3>
                           <p className="fantom-card1">
@@ -100,8 +103,8 @@ export default function Staking() {
                         </div>
                         </div>
                         </div>
-                        <div className="col-6">
-                        <div className="d-flex justify-content-center ">
+                        <div className="col-4">
+                        <div className="d-flex justify-content-start">
                         <div className="rate-card ">
                           <h3 className="card-headnig">Fees</h3>
                           <p className="fantom-card2">
@@ -113,7 +116,7 @@ export default function Staking() {
                       </div>
                    
                       </div>
-                      <div className=" steke-sm-btn-none">
+                      <div className="steke-sm-btn-none">
                       <div className=" d-flex justify-content-center">
                       <button
                           type="button"
@@ -125,75 +128,37 @@ export default function Staking() {
                       </div>
                       </div>
                     </div>
-
+                         <div className="mobile-footer">
+                         <div className="row">
+                   <div className="col-6">
+                   <div className=" steke-sm-btn-custom">
+                      <div className=" d-flex justify-content-start">
+                      <a className=" d-flex   qustion-img-mobile"><img src={questionCircle} alt="" /><span>How to stake</span></a>
+                      </div>
+                   </div>
+                      </div>
+                         <div className="col-6">
+                   <div className=" steke-sm-btn">
+                      <div className=" d-flex justify-content-start">
+                      <button
+                          type="button"
+                          className="steke-model-btn-mobile "
+                        >
+                          Stake
+                        </button>
+                      </div>
+                   </div>
+                      </div>
+                         </div>
+                         </div>
                     {/* ------------------------------------------------------------------------------------------------ */}
-                    <div className="row row-wrapper">
-                    <div className="col-12 col-md-6 order-1 order-md-0 ">
-                        <div className="card-headnig" onClick={copyToClipboard} >
-                          <h4>Operator Address</h4> <img src={contentCapy} alt="" />
-                        </div>
-                        <p className="p-card-link" ref={textAreaRef} href="certikvaloper1hdutpn340l29gwl3nyrkxwfdyu8q96zwpyxamn">
-                          certikvaloper1hdutpn340l29gwl3nyrkx wfdyu8q96zwpyxamn
-                        </p>
-                      
-
-                        <a className=" d-flex   qustion-img"><img src={questionCircle} alt="" /><span>How to stake</span></a>
-                      </div>
-                      <div className="col-12 col-md-6 order-0 order-md-1 ">
-                      <div className="row  justify-content-between">
-                    
-                        <div className="col-6 ">
-                        <div className="ml-3">
-                        <div className="rate-card">
-                          <h3 className="card-headnig">Annual Reward Rate</h3>
-                          <p className="fantom-card1">
-                           15.00%
-                          </p>
-                        </div>
-                        </div>
-                        </div>
-                        <div className="col-6">
-                        <div className="d-flex justify-content-center ">
-                        <div className="rate-card ">
-                          <h3 className="card-headnig">Fees</h3>
-                          <p className="fantom-card2">
-                          5.00%
-                          </p>
-                        </div>
-                        </div>
-                       
-                      </div>
-                   
-                      </div>
-                      <div className=" steke-sm-btn-none">
-                      <div className=" d-flex justify-content-center">
-                      <button
-                          type="button"
-                          className="steke-model-btn  "
-                        >
-                          Stake
-                        </button>
-                      </div>
-                      </div>
-                      </div>
-                    </div>
-                    <div className="qustion-img-mobile ">
-                   
-                     <div className="d-flex">
-                     <a className="d-flex qustion-img-mobile"><img src={questionCircle} alt="" />How to stake</a>
-                      <button
-                          type="button"
-                          className="steke-model-btn"
-                        >
-                          Stake
-                        </button>
-                     </div>
-                        </div>
+             
                   </div>
                 </div>
               </>
             }
             handleClose={togglePopup}
+            handleCloseValue={"dddddddd"}
           />
         )}
       </div>
@@ -210,6 +175,7 @@ export default function Staking() {
             <div className="text-center">
               <ScrollReveal config={anim.animate5}>
                 <h5 className="text-5xl font-bold text-primary ">Stake with us</h5>
+                {isOpen}
               </ScrollReveal>
               <ScrollReveal config={anim.animate6}>
                 <p className="text-primary-dark font-medium mt-6 mb-12">
@@ -221,9 +187,9 @@ export default function Staking() {
 
             <div className="row no-gutters -ml-1 -mr-1">
             <div class="row justify-content-around">
-  <div style={{width: "12rem",padding:"12px"}} class=" stake-card-custom col-sm-2 ml-auto mr-auto">
-  <ScrollReveal config={anim.animate8}>
-                <div className="stake-card">
+            <div style={{width: "12rem",padding:"12px"}} class=" stake-card-custom col-sm-2 ml-auto mr-auto">
+            <ScrollReveal config={anim.animate8}>
+                          <div className="stake-card">
   
                     <div className="d-flex p-1 no-gutters justify-center">
                     <div className="col w-8 h-8 m-1 flex items-center bg-white rounded-lg">
